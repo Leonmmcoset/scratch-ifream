@@ -10,5 +10,13 @@
     "scripts": {
         "dev": "webpack --config ./webpack.config.js --mode development --watch",
         "build": "webpack --mode production"
+    },
+    "dependencies": {
+        "browserify-zlib": "^0.2.0",
+        "os-browserify": "^0.3.0",
+        "path-browserify": "^1.0.1",
+        "stream-browserify": "^3.0.0",
+        "stream-http": "^3.2.0",
+        "util": "^0.12.5"
     }
-}    
+}
