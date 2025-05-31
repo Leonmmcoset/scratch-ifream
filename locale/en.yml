@@ -1,0 +1,9 @@
+flarum-iframe-embed:
+  forum:
+    buttons:
+      insert_iframe: "插入嵌入内容"
+    modal:
+      title: "插入嵌入内容"
+      url_label: "嵌入链接"
+      url_placeholder: "输入要嵌入的链接"
+      submit_button: "插入"    
