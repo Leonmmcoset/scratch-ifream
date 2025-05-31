@@ -1,0 +1,14 @@
+{
+    "name": "leonmmcoset/flarum-scratch-ifream",
+    "private": true,
+    "version": "0.1.0",
+    "devDependencies": {
+        "flarum-webpack-config": "^1.0.0",
+        "webpack": "^5.75.0",
+        "webpack-cli": "^4.10.0"
+    },
+    "scripts": {
+        "dev": "webpack --config ./webpack.config.js --mode development --watch",
+        "build": "webpack --mode production"
+    }
+}    

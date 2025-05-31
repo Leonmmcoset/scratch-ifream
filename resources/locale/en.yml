@@ -1,0 +1,9 @@
+leonmmcoset-scratch-ifream:
+  forum:
+    buttons:
+      insert_scratch: "Embed Scratch"
+    modal:
+      title: "Embed Scratch Project"
+      url_label: "Project URL"
+      url_placeholder: "Enter Scratch project URL"
+      submit_button: "Embed"    
