@@ -1,28 +1,29 @@
 {
-    "name": "leonmmcoset/scratch-ifream",
-    "description": "在帖子中嵌入iframe内容 - 专给ScDev使用",
+    "name": "leonmmcoset/scratch-iframe",
+    "description": "在Flarum中嵌入Scratch项目iframe",
     "type": "flarum-extension",
-    "keywords": ["forum", "embed", "iframe"],
+    "keywords": ["flarum", "iframe", "embed", "scratch"],
     "license": "MIT",
     "require": {
-      "flarum/core": "^1.0.0"
+        "flarum/core": "^1.0"
     },
     "autoload": {
-      "psr-4": {
-        "leonmmcoset\\IframeEmbed\\": "src/"
-      }
+        "psr-4": {
+            "Leonmmcoset\\ScratchIframe\\": "src/"
+        }
     },
     "extra": {
-      "flarum-extension": {
-        "title": "IFrame Embed",
-        "icon": {
-          "name": "fas fa-code",
-          "backgroundColor": "#e74c3c",
-          "color": "#fff"
+        "flarum-extension": {
+            "title": "Scratch Iframe Embed",
+            "category": "feature",
+            "icon": {
+                "name": "fas fa-code",
+                "backgroundColor": "#e74c3c",
+                "color": "#fff"
+            }
+        },
+        "flagrow": {
+            "discuss": ""
         }
-      },
-      "flagrow": {
-        "discuss": ""
-      }
     }
-  }
+}    
