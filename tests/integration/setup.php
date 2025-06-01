@@ -1,16 +1,26 @@
 <?php
 
-/*
- * This file is part of Flarum.
- *
- * For detailed copyright and license information, please view the
- * LICENSE file that was distributed with this source code.
- */
-
 use Flarum\Testing\integration\Setup\SetupScript;
+use Flarum\Testing\integration\Config;
 
-require __DIR__.'/../../vendor/autoload.php';
+require __DIR__.'/../vendor/autoload.php';
 
-$setup = new SetupScript();
+$config = new Config([
+    'database' => [
+        'driver' => 'mysql', // 显式指定使用MySQL
+        'host' => '127.0.0.1',
+        'port' => '3306',
+        'database' => 'flarum_test',
+        'username' => 'root',
+        'password' => '',
+        'prefix' => '',
+    ],
+    'admin' => [
+        'username' => 'flarum',
+        'password' => 'password',
+        'email' => 'admin@example.com',
+    ],
+]);
 
-$setup->run();
+$script = new SetupScript($config);
+$script->run();
