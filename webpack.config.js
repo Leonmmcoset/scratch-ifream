@@ -3,7 +3,7 @@ const flarumConfig = require('flarum-webpack-config');
 
 module.exports = merge(flarumConfig(), {
   entry: {
-    // admin: './admin.js',
+    admin: './admin.js',
     forum: './forum.js'
   },
   output: {
@@ -20,10 +20,10 @@ module.exports = merge(flarumConfig(), {
           options: {
             presets: [
               '@babel/preset-env',
-              ['@babel/preset-react', { pragma: 'm' }] // 指定JSX转换函数为Mithril的m()
+              ['@babel/preset-react', { pragma: 'm' }]
             ],
             plugins: [
-              ['@babel/plugin-transform-react-jsx', { pragma: 'm' }] // 配置JSX转换
+              ['@babel/plugin-transform-react-jsx', { pragma: 'm' }]
             ]
           }
         }

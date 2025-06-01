@@ -6,4 +6,6 @@ flarum-iframe:
       title: "Embed Web Content"
       instructions: "Enter the URL of the web page you want to embed:"
       placeholder: "https://example.com"
-      submit_button: "Embed"  
+      submit_button: "Embed"
+    permissions:
+      embed_iframe: "Can embed iframes in posts"  

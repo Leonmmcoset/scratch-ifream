@@ -41,18 +41,12 @@ export default class IframeModal extends Modal {
     const url = this.url();
     if (!url) return;
 
-    // 获取当前编辑器实例
     const composer = app.composer;
     const body = composer.body();
-    
-    // 构建iframe代码
     const iframeUrl = `https://run.scdev.top/?url=${encodeURIComponent(url)}`;
     const iframeCode = `[iframe]${iframeUrl}[/iframe]`;
     
-    // 更新编辑器内容
     composer.body(body + '\n\n' + iframeCode);
-    
-    // 关闭弹窗
     app.modal.close();
   }
 }  

@@ -1,0 +1,11 @@
+flarum-iframe:
+  forum:
+    composer:
+      embed_iframe_button: "嵌入iframe"
+    modal:
+      title: "嵌入网页内容"
+      instructions: "请输入要嵌入的网页链接："
+      placeholder: "https://example.com"
+      submit_button: "嵌入"
+    permissions:
+      embed_iframe: "允许在帖子中嵌入iframe"  

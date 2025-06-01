@@ -1,0 +1,1 @@
+require('./src/admin/index.js');  
