@@ -1,0 +1,9 @@
+flarum-iframe:
+  forum:
+    composer:
+      embed_iframe_button: "Embed iframe"
+    modal:
+      title: "Embed Web Content"
+      instructions: "Enter the URL of the web page you want to embed:"
+      placeholder: "https://example.com"
+      submit_button: "Embed"  
