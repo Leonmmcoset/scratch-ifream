@@ -1,0 +1,5 @@
+leonmmcoset-scratch-ifream:
+  admin:
+    run_url_label: "Scratch运行器URL前缀"
+  forum:
+    add_scratch_button: "添加Scratch项目"

@@ -1,0 +1,19 @@
+{
+  "extends": "flarum-tsconfig",
+  "include": [
+    "src/**/*",
+    "../vendor/*/*/js/dist-typings/@types/**/*",
+    "@types/**/*"
+  ],
+  "compilerOptions": {
+    "declarationDir": "./dist-typings",
+    "baseUrl": ".",
+    "paths": {
+      "flarum/*": ["../vendor/flarum/core/js/dist-typings/*"]
+    },
+    // 添加以下JSX相关配置
+    "jsx": "react",
+    "jsxFactory": "m",
+    "jsxFragmentFactory": "'Fragment'"
+  }
+}
