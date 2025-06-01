@@ -1,11 +1,11 @@
-import { Component } from 'flarum/common/Component';
+import Component from 'flarum/common/Component';
 import { Setting } from 'flarum/admin/components';
 import Button from 'flarum/common/components/Button';
 import LoadingButton from 'flarum/common/components/LoadingButton';
 
 export default class ScratchIframeSettings extends Component {
     init() {
-        super.init();
+        super.init();  // 确保调用父类构造函数
         this.baseUrl = m.stream(app.settings.get('scratch-iframe.base_url', 'https://run.scdev.top/?url='));
         this.loading = false;
     }

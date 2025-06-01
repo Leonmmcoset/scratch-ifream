@@ -1,14 +1,14 @@
 import { extend } from 'flarum/common/extend';
 import AdminNav from 'flarum/admin/components/AdminNav';
 import AdminLinkButton from 'flarum/admin/components/AdminLinkButton';
-import ScratchIframeSettings from './components/ScratchIframeSettings';
+import ScratchIframeSettings from './components/ScratchIframeSettings';  // 确保路径正确
 
 export default function() {
     app.initializers.add('scratch-iframe-admin', (app) => {
         // 注册后台设置页面（显示在后台菜单）
         app.extensionData
-            .for('scratch-iframe')  // 需与composer.json的"name"字段一致
-            .registerPage(ScratchIframeSettings);
+            .for('scratch-iframe')  // 与composer.json的"name"字段一致
+            .registerPage(ScratchIframeSettings);  // 注册的是类本身，而非实例
 
         // 可选：添加左侧导航按钮
         extend(AdminNav.prototype, 'items', (items) => {
