@@ -43,6 +43,18 @@ class ScratchIframeModal extends Modal {
       ]),
     ]);
   }
+
+  // 新增：添加onSubmit方法
+  onSubmit() {
+    if (!this.url) return;
+
+    const editor = this.attrs.editor;
+    const iframeUrl = app.forum.attribute('leonmmcoset-scratch-ifream.run_url') + encodeURIComponent(this.url);
+    const iframeHtml = `<iframe src="${iframeUrl}" width="100%" height="600" frameborder="0" allowfullscreen></iframe>`;
+    
+    editor.insertAtCursor(iframeHtml);
+    this.hide();
+  }
 }
 
 // 仅保留一个默认导出（函数形式）

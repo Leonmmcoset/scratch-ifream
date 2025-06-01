@@ -3,17 +3,18 @@
   "include": [
     "src/**/*",
     "../vendor/*/*/js/dist-typings/@types/**/*",
-    "@types/**/*"
+    "@types/**/*" // 新增：包含自定义类型声明
   ],
   "compilerOptions": {
     "declarationDir": "./dist-typings",
     "baseUrl": ".",
     "paths": {
-      "flarum/*": ["../vendor/flarum/core/js/dist-typings/*"]
+      "flarum/*": ["../vendor/flarum/core/js/dist-typings/*"],
+      "flarum/common/models": ["../vendor/flarum/core/js/dist-typings/common/models"], // 明确路径
+      "flarum/common/components/*": ["../vendor/flarum/core/js/dist-typings/common/components/*"] // 明确组件路径
     },
-    // 添加以下JSX相关配置
     "jsx": "react",
     "jsxFactory": "m",
-    "jsxFragmentFactory": "Fragment"  // 修正：移除多余的引号
+    "jsxFragmentFactory": "Fragment"
   }
 }
