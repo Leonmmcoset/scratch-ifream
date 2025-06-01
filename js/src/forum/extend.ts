@@ -1,3 +1,4 @@
+// Hello world!
 import Extend from 'flarum/common/extenders';
 import commonExtend from '../common/extend';
 import app from 'flarum/forum/app';
