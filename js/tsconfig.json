@@ -14,6 +14,6 @@
     // 添加以下JSX相关配置
     "jsx": "react",
     "jsxFactory": "m",
-    "jsxFragmentFactory": "'Fragment'"
+    "jsxFragmentFactory": "Fragment"  // 修正：移除多余的引号
   }
 }

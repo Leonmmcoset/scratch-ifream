@@ -25,15 +25,19 @@ class ScratchIframeModal extends Modal {
           value: this.url,
           oninput: (value: string) => {
             this.url = value;
-          }
-        })
+          },
+        }),
       ]),
       m('div', { className: 'Form-group' }, [
-        m(Button, {
-          className: 'Button Button--primary',
-          onclick: this.onSubmit.bind(this)
-        }, '添加')
-      ])
+        m(
+          Button,
+          {
+            className: 'Button Button--primary',
+            onclick: this.onSubmit.bind(this),
+          },
+          '添加'
+        ),
+      ]),
     ]);
   }
 
@@ -43,23 +47,28 @@ class ScratchIframeModal extends Modal {
     const editor = this.attrs.editor;
     const iframeUrl = app.forum.attribute('leonmmcoset-scratch-ifream.run_url') + encodeURIComponent(this.url);
     const iframeHtml = `<iframe src="${iframeUrl}" width="100%" height="600" frameborder="0" allowfullscreen></iframe>`;
-    
+
     editor.insertAtCursor(iframeHtml);
     this.hide();
   }
 }
 
 export default function () {
-  extend(TextEditor.prototype, 'toolbarItems', function(items) {
-    items.add('scratch-iframe', 
-      m(Button, {
-        icon: 'fas fa-code',
-        onclick: () => {
-          app.modal.show(ScratchIframeModal, {
-            editor: this
-          });
-        }
-      }, app.translator.trans('leonmmcoset-scratch-ifream.forum.add_scratch_button'))
+  extend(TextEditor.prototype, 'toolbarItems', function (items) {
+    items.add(
+      'scratch-iframe',
+      m(
+        Button,
+        {
+          icon: 'fas fa-code',
+          onclick: () => {
+            app.modal.show(ScratchIframeModal, {
+              editor: this,
+            });
+          },
+        },
+        app.translator.trans('leonmmcoset-scratch-ifream.forum.add_scratch_button')
+      )
     );
   });
 }

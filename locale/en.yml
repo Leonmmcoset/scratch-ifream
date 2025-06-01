@@ -1,5 +1,6 @@
 leonmmcoset-scratch-ifream:
   admin:
     run_url_label: "Scratch运行器URL前缀"
+    permission_label: "允许使用Scratch项目嵌入"  # 后台权限显示名称
   forum:
     add_scratch_button: "添加Scratch项目"
