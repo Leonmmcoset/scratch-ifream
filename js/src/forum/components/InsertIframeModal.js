@@ -1,17 +1,15 @@
-// 新增：从Flarum核心导入Modal组件
-import * as ModalTest from 'flarum/components/Modal';
+// 修改导入方式：使用通配符导入整个模块
+import * as FlarumModal from 'flarum/components/Modal';
 import { Button } from 'flarum/common/components';
 
-export default class InsertIframeModal extends Modal {
+export default class InsertIframeModal extends FlarumModal.default {
   init() {
     super.init();
     this.url = m.stream('');
   }
 
   view() {
-    // 从前端 payload 获取插件元数据
-    const { title, description, iconColor } = app.payload.scratchIframe || {};
-
+    // 保持原有视图逻辑不变
     return super.view([
       m('.Modal-header', [
         // 使用插件标题作为模态框标题
