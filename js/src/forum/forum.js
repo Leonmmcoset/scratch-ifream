@@ -8,7 +8,7 @@ app.initializers.add('scratch-iframe', (app) => {
   // 原 forum.js 的初始化逻辑
   extend(Composer.prototype, 'view', function (view) {
     const controlsIndex = view.children.findIndex((child) => child.tag === '.Composer-controls');
-    
+
     if (controlsIndex > -1 && app.session.user?.hasPermission('scratch-iframe.insert')) {
       view.children[controlsIndex].children.push(
         Button.component(

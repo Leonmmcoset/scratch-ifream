@@ -4,12 +4,12 @@ import AdminLinkButton from 'flarum/admin/components/AdminLinkButton';
 import ScratchIframeSettings from './components/ScratchIframeSettings';
 
 app.initializers.add('scratch-iframe-admin', (app) => {
-  console.log("[ScratchIframe] 后台初始化开始");
-  
+  console.log('[ScratchIframe] 后台初始化开始');
+
   // 修复组件注册方式
   // 当前代码（直接传递类引用）
   app.extensionData.for('scratch-iframe').registerPage(ScratchIframeSettings);
-  
+
   // 正确方式（传递组件工厂函数）
   app.extensionData.for('scratch-iframe').registerPage(() => ScratchIframeSettings);
 

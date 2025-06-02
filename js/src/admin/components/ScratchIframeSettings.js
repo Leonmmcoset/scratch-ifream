@@ -19,15 +19,9 @@ export default class ScratchIframeSettings extends Component {
     });
   }
 
-  oncreate(vnode) {
-    // 在此生命周期钩子中操作 DOM（元素已渲染）
-    if (this.$('.FormControl').length) {
-      this.$('.FormControl').html('安全内容');
-    }
-  }
-
   view() {
-    return m('.ScratchIframeSettings', [ // 确保这个根元素存在
+    return m('.ScratchIframeSettings', [
+      // 确保这个根元素存在
       m('h2', app.translator.trans('scratch-iframe.admin.settings.title')),
       m('.Form-group', [
         // 检查所有类名是否与模板匹配（如 .FormControl）
