@@ -2,7 +2,7 @@
 import * as FlarumModal from 'flarum/components/Modal';
 import { Button } from 'flarum/common/components';
 
-export default class InsertIframeModal extends FlarumModal.default {
+export default class InsertIframeModal extends FlarumModal {
   init() {
     super.init();
     this.url = m.stream('');
