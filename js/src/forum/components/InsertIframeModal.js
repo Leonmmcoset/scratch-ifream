@@ -1,5 +1,5 @@
 // 新增：从Flarum核心导入Modal组件
-import Modal from 'flarum/components/Modal'; // 旧版导入方式
+import * as ModalTest from 'flarum/components/Modal';
 import { Button } from 'flarum/common/components';
 
 export default class InsertIframeModal extends Modal {
