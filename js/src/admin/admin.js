@@ -5,13 +5,17 @@ import ScratchIframeSettings from './components/ScratchIframeSettings';
 
 export default function () {
   app.initializers.add('scratch-iframe-admin', (app) => {
-    // 注册后台导航按钮（显示在左侧菜单）
+    // 新增调试日志
+    console.log('[ScratchIframe] 后台初始化开始 - hello, admin!');
+
     app.extensionData
-      .for('scratch-iframe') // 替换为你的插件ID（需与composer.json一致）
+      .for('scratch-iframe')
       .registerPage(ScratchIframeSettings);
 
-    // 可选：添加快捷导航按钮（非必须）
     extend(AdminNav.prototype, 'items', (items) => {
+      // 新增导航项添加日志
+      console.log('[ScratchIframe] 添加后台导航按钮');
+      
       items.add(
         'scratch-iframe',
         AdminLinkButton.component({
