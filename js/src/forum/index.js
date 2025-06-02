@@ -1,23 +1,22 @@
 import { extend } from 'flarum/common/extend';
 import Composer from 'flarum/forum/components/Composer';
 import Button from 'flarum/common/components/Button';
+// 新增：将导入语句移到文件顶部（正确位置）
 import InsertIframeModal from './components/InsertIframeModal';
 
 export default function() {
     app.initializers.add('scratch-iframe-forum', (app) => {
-        // 扩展发帖框（Composer）的工具栏
         extend(Composer.prototype, 'view', function(view) {
-            // 定位到工具栏容器（根据实际DOM结构调整）
             const controlsIndex = view.children.findIndex(child => 
                 child.tag === '.Composer-controls'
             );
 
             if (controlsIndex > -1) {
-                // 向工具栏添加"插入运行链接"按钮
+                // 此处直接使用已导入的InsertIframeModal
                 view.children[controlsIndex].children.push(
                     Button.component({
                         className: 'Button Button--icon',
-                        onclick: () => app.modal.show(InsertIframeModal),
+                        onclick: () => app.modal.show(InsertIframeModal),  // 直接引用组件
                     }, [
                         m('svg', {class: 'Icon Icon--link'}, m('use', {href: '#link'})),
                         ' 插入运行链接'
