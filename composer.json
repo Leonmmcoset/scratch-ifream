@@ -7,7 +7,7 @@
     "type": "flarum-extension",
     "license": "MIT",
     "require": {
-        "flarum/core": "^1.0.0"
+        "flarum/core": "^1.8.9"
     },
     "require-dev": {
         "flarum/testing": "^1.0.0"
@@ -32,13 +32,11 @@
     "extra": {
         "flarum-extension": {
             "title": "Scratch Iframe",
-            "category": "",
+            "category": "feature",
             "icon": {
-                "name": "",
-                "backgroundColor": "",
-                "color": ""
-            },
-            "locales": ["locale/zh_CN.yml", "locale/zh_HK.yml", "locale/en.yml"]
+                "backgroundColor": "#2196F3",
+                "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiI+PHBhdGggZD0iTTEyIDV2MmgzVjV6bTAgNGgzdjNIMnYtM2gzem0tNCAwaDR2M2gtNHoiIGZpbGw9IiNmZmYiLz48L3N2Zz4="
+            }
         }
     },
     "scripts": {
