@@ -1,5 +1,5 @@
 // 新增：从Flarum核心导入Modal组件
-import { Modal } from 'flarum/common/components';
+import Modal from 'flarum/components/Modal'; // 旧版导入方式
 import { Button } from 'flarum/common/components';
 
 // 确保类继承自导入的Modal
