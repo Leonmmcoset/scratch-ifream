@@ -1,0 +1,17 @@
+scratch-iframe:
+  admin:
+    permissions:
+      insert: "Allow inserting run links"
+    settings:
+      title: "Scratch Run Link Settings"
+      base_url: "Base URL"
+      base_url_help: "Base URL for generating IFrames, final link format: [Base URL]+[User input link]"
+      save_button: "Save Settings"
+  forum:
+    buttons:
+      insert: "Insert Run Link"
+    modal:
+      title: "Insert Run Link"
+      placeholder: "Enter link address"
+      cancel: "Cancel"
+      insert: "Insert"

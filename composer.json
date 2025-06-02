@@ -37,7 +37,8 @@
                 "name": "",
                 "backgroundColor": "",
                 "color": ""
-            }
+            },
+            "locales": ["locale/zh_CN.yml", "locale/zh_HK.yml", "locale/en.yml"]
         }
     },
     "scripts": {

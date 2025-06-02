@@ -1,0 +1,17 @@
+scratch-iframe:
+  admin:
+    permissions:
+      insert: "允許插入運行連結"
+    settings:
+      title: "Scratch 運行連結設定"
+      base_url: "基礎URL位址"
+      base_url_help: "用於生成IFrame的基礎URL，最終連結格式為：[基礎URL]+[用戶輸入連結]"
+      save_button: "儲存設定"
+  forum:
+    buttons:
+      insert: "插入運行連結"
+    modal:
+      title: "插入運行連結"
+      placeholder: "請輸入連結位址"
+      cancel: "取消"
+      insert: "插入"

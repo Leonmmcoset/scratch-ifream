@@ -1,0 +1,7 @@
+{
+  "extra": {
+    "flarum-extension": {
+      "locales": ["locales/zh_CN.yml", "locales/zh_HK.yml", "locales/en.yml"]
+    }
+  }
+}

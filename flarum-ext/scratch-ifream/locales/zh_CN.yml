@@ -1,0 +1,17 @@
+scratch-iframe:
+  admin:
+    permissions:
+      insert: "允许插入运行链接"
+    settings:
+      title: "Scratch 运行链接设置"
+      base_url: "基础URL地址"
+      base_url_help: "用于生成IFrame的基础URL，最终链接格式为：[基础URL]+[用户输入链接]"
+      save_button: "保存设置"
+  forum:
+    buttons:
+      insert: "插入运行链接"
+    modal:
+      title: "插入运行链接"
+      placeholder: "请输入链接地址"
+      cancel: "取消"
+      insert: "插入"
